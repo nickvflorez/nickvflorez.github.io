@@ -1,69 +1,121 @@
 <!DOCTYPE html>
 <html>
-<body background="whiteback.jpg">
-<head>
-  <title>Nick Florez's Profile</title>
+  <head>
+    <title>Nick Florez's Profile</title>
+      <link rel="stylesheet" style="css" href="styles.css">
+      <script src="script.js"></script>
+    <body background="whiteback.jpg">
+    </body>
 </head>
-<
-<style>
-h1, h2 {
-  color: red;
-  font-style: times;
-}
-h1 {
-background-color: orange;
-}
-</style>
-<h1>Nickolas Florez</h1>
-<h2>Accordionist</h2>
-<img src="ReyDelNorteIIIL-GreenYellow.jpg" width="400" height "300">
-<img src="ReyDelNorte-II4-White1.jpg" width="400" height="300">
-<h2>Who am I?</h2>
-<style>
-p {
-  font-size: 18px;
-  font-style: times;
-  color: black;
-}
-</style>
-<p>I am the oldest of three boys. I started playing the accordion when I was
-really young; I started playing professionally at the age of 10. In high school
-I participated in Marching Band playing the Alto Saxophone, I did choir for 2
-years, and was an actor for the Drama club. I got into coding and computer
-science when I found the website Codeacademy.com </p>
-<h2>Hometown</h2>
+<div style="color:#800000">
 
-<em><strong>Phoenix, Arizona</strong></em>
-<li>
-<img src="GrandCanyon.jpg" width="400" height="300">
-<img src="Phoenix.jpg" width="400" height="300">
+  <h1><center>Nickolas Florez</center></h1>
+  <h2><center>Accordionist</center></h2>
+    <center><img src="ReyDelNorteIIIL-GreenYellow.jpg" width="400" height "300">
+    <img src="corona2.jpg" width="400" height="300"></center>
+  <h2><center>Who am I?</center></h2>
+    <p>I am the oldest of three boys. I started playing the accordion when I was
+      really young; I started playing professionally at the age of 10. In high school
+      I participated in Marching Band playing the Alto Saxophone, I did choir for 2
+      years, and was an actor for the Drama club. I got into coding and computer
+      science when I found the website <a href="https://www.Codeacademy.com"
+      >Codecademy.</a></p>
+  <h2><center>Hometown</center></h2>
 
-<h2>University</h2>
-</li>
-<p id="title"><strong>Arizona State University</strong></p>
-<img src="ASU.jpg" width="200" height="200">
-<img src="Brickyard.jpg" width="300" height="200">
+<em><strong><center>Phoenix, Arizona</center></strong></em>
+<em><strong><left>Grand Canyon</left></strong></em>
+  <li>
+    <center><img src="GrandCanyon.jpg" width="400" height="300">
+      <img src="Phoenix.jpg" width="400" height="300">
+      <img src="desertnight.jpg" width="400" height="300"></center>
 
-<h2>Other Profiles</h2>
+  <h2><center>University</center></h2>
+    </li>
+      <p id="title"><strong><center>Arizona State University</center></strong></p>
+      <center><a href="https://www.asu.edu"><img src="ASU.jpg"
+        width="200" height="200"></a>
+        <a href="https://www.engineering.asu.edu"><img src="Brickyard.jpg" width="300"
+          height="200"></a>
+        <img src="sundevil.gif" width= "300" height="300"></center>
+  <h2>Other Profiles</h2>
 <ul>
-  <li><a href="https://plus.google.com/u/0/">Google+</a></li>
+  <li><a href="https://plus.goosgle.com/u/0/">Google+</a></li>
   <li><a href="https://www.facebook.com/">Facebook</a></li>
 </ul>
-<style>
-h2 {
-  background-color: orange;
-}
-</style>
+
 <h2>My Favorite TV Shows</h2>
-<style>
-ol {
-  background-color: orange;
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="walkingdead.jpeg" style="width:100%">
+  <div class="text">There isn't democracy anymore...</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="breakinkbad.jpg" style="width:100%">
+  <div class="text">I'm the one who knocks.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="ahs.jpg" style="width:100%">
+  <div class="text">Don't be a hater, dear.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="oitnb.png" style="width:100%">
+  <div class="text">Ugh.People.</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
-</style>
-<ul>
-  <li>The Walking Dead</li>
-  <img src="walkingdead.jpeg" width="400" height="300">
-  <li>Breaking Bad</li>
-  <li>House M.D.</li>
-  <em> There are too many that I care to list. </p>
-</ul>
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+  <em>There are too many that I care to list. </p>
+</div>
+</body>
+</html>
